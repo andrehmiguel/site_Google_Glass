@@ -10,6 +10,13 @@
 </head>
 
 <script src="_javascript/funcoes.js"></script>
+<script>
+    function calc_total(){
+        var qnt = parseInt(document.getElementById('iQnt').value);
+        tot = qnt*1500;
+        document.getElementById('iTot').value = tot;
+    }
+</script>
 
 <body>
     <div id="interface">
@@ -44,7 +51,7 @@
                 </header>
             
 
-<form action="mailto:contato@andrehmiguel.com" method="POST" id="fContato">
+<form action="mailto:contato@andrehmiguel.com" method="POST" id="fContato" oninput="calc_total()">
     <fieldset id="usuario">
         <legend>
             Identificação do Usuário
@@ -129,7 +136,7 @@
             </p>
             <p>
                 <label for="iMsg">Mensagem:</label>
-                <textarea name="tMsg" id="iMsg" cols="45" rows="5" placeholder="Deixe sua mensagem"></textarea>
+                <textarea name="tMsg" id="iMsg" cols="35" rows="5" placeholder="Deixe sua mensagem"></textarea>
             </p>
     </fieldset>
     
@@ -137,14 +144,14 @@
         <legend>
             Quero um Google Glass
         </legend>
-            Gostaria de adquirir um Google Glass quando disponível
-            Cor:
-            Quantidade:
-            Preço Total: R$
+            <p><input type="checkbox" name="tAdq" id="iAdq" checked><label for="iAdq">Gostaria de adquirir um Google Glass quando disponível</label></p>
+            <p><label for="iCor">Cor: <input type="color" name="tCor" id="iCor" value="#0000FF"></label></p>                
+            <p><label for="iQnt">Quantidade: <input type="number" name="tQnt" id="iQnt" min="0" max="5"></label></p> 
+            <p><label for="iPreco">Preço Total: R$ </label><input type="text" name="tTot" id="iTot" placeholder="Total a pagar" readonly></p> 
     </fieldset>
     
     
-    [BOTÃO ENVIAR]
+    <input type="image" src="_imagens/botao-enviar.png" alt="">
 </form>
 </article>
             </section>
