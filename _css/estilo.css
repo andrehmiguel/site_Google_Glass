@@ -214,6 +214,13 @@ table#specs caption span{
     margin-top: 10px;
 }
 
+
+
+video#video02{
+    width: 348px;
+}
+
+
 /*RODAPÉ*************************************/
 footer#rodape{
     clear: both;   
